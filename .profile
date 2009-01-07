@@ -13,8 +13,11 @@ GREEN="\[\033[0;32m\]"
 BLUE="\[\033[0;36m\]"
 WHITE="\[\033[0;37m\]"
  
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
 export PS1="$GREEN\h:$BLUE\W$WHITE\$(parse_git_branch)\$ "
@@ -31,3 +34,6 @@ alias rm='rm -i'
 alias grep='grep --exclude=.svn'
 alias cl='clear'
 alias gpp='git pull && git push'
+alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
+
+complete -C /usr/local/lib/rake-completion.rb -o default rake
