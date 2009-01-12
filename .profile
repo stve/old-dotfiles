@@ -35,5 +35,8 @@ alias grep='grep --exclude=.svn'
 alias cl='clear'
 alias gpp='git pull && git push'
 alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
+alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
+alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+
 
 complete -C /usr/local/lib/rake-completion.rb -o default rake
