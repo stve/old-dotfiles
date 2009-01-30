@@ -9,13 +9,16 @@ export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
 GREEN="\[\033[0;32m\]"
 BLUE="\[\033[0;36m\]"
 WHITE="\[\033[0;37m\]"
- 
+
+# Git functions
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
+
+source /usr/local/bin/git-completion.sh
 
 export PS1="$GREEN\h:$BLUE\W$WHITE\$(parse_git_branch)\$ "
 
@@ -35,4 +38,3 @@ alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
 alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
 
 
-complete -C /usr/local/lib/rake-completion.rb -o default rake
