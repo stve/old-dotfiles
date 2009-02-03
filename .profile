@@ -33,6 +33,7 @@ alias la='ls -A'
 alias rm='rm -i'
 alias cl='clear'
 alias gb='git branch'
+alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
 alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
 alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
