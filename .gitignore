@@ -1,8 +1,17 @@
+# osx
 .DS_Store
+profile
 *~
 .viminfo
 *.tmproj
 *.log
 .svn
+
+# windows
 Thumbs.db
 Desktop.ini
+
+# xcode
+build/*
+*.pbxuser
+*.mode1v3
