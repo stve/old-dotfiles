@@ -32,10 +32,15 @@ alias ll='ls -l'
 alias la='ls -A'
 alias rm='rm -i'
 alias cl='clear'
+alias reload='source ~/.profile'
+
+# git
 alias gb='git branch'
 alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
 alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
+
+# mysql
 alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
 alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
 
