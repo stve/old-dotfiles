@@ -33,7 +33,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias rm='rm -i'
 alias cl='clear'
-alias reload='source ~/.profile'
+alias reload='source ~/.bashrc'
 alias rr='touch tmp/restart.txt'
 alias flush='memflush --servers=localhost'
 
