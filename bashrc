@@ -2,8 +2,6 @@
 export EC2_HOME=~/.ec2
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$EC2_HOME/bin:$PATH"
 export MANPATH=/opt/local/share/man:$MANPATH
-export EC2_PRIVATE_KEY="$EC2_HOME/pk-IE7JVLI5FN5SESWSUC3QFYTUXAKJINGW.pem"
-export EC2_CERT="$EC2_HOME/cert-IE7JVLI5FN5SESWSUC3QFYTUXAKJINGW.pem"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
 
 # shell
