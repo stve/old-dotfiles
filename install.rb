@@ -4,6 +4,9 @@
 
 home = File.expand_path('~')
 
+# setup backup directory
+backup = File.join(home, ".olddotfiles")
+`mkdir -p #{backup}`
 
 Dir['*'].each do |file|
   # skip if install.rb or README
@@ -12,15 +15,17 @@ Dir['*'].each do |file|
   symfile = ".#{file}"
   target = File.join(home, symfile)
 
-  # setup backup directory
-  backup = File.join(home, ".olddotfiles")
-  `mkdir -p #{backup}`
-  
-  # backup the file if it exists and it's not a symlink
-  `mv #{target} #{File.join(backup, symfile)}` if File.exist?(target) and !File.symlink?(target)
+  if File.exist?(target)
+    # if the symlink already exists, just skip this
+    next if File.symlink?(target) && File.readlink(target) == File.expand_path(file)
+    
+    # backup the file if it exists and it's not a symlink
+    `mv #{target} #{File.join(backup, symfile)}` unless File.symlink?(target)
+  end
   
   # create a symbolic link
-  `ln -s #{File.expand_path file} #{target}`
+  `ln -s #{File.expand_path(file)} #{target}`
+   
 end
 
 # git push on commit
