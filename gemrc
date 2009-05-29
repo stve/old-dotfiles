@@ -1,5 +1,6 @@
 --- 
 :bulk_threshold: 1000
+gem: --no-ri --no-rdoc
 :verbose: true
 :sources: 
 - http://gems.rubyforge.org/
@@ -7,4 +8,3 @@
 :benchmark: false
 :backtrace: false
 :update_sources: true
-rdoc: --inline-source --line-numbers --format=html --template=hanna 
