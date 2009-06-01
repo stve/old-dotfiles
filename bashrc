@@ -35,6 +35,14 @@ alias reload='source ~/.bashrc'
 alias rr='touch tmp/restart.txt'
 alias flush='memflush --servers=localhost'
 
+alias work='cd ~/work'
+alias cdc='cd ~/work/coolspotters'
+alias cds='cd ~/work/simplesports'
+alias cdf='cd ~/work/fanzter'
+alias cdfr='cd ~/work/fanzter-recipes'
+alias cdfe='cd ~/work/fanzter-extras'
+alias csce='cd ~/work/coolspotters-extras'
+
 # git
 alias gb='git branch'
 alias rollup='rake git:rollup'
