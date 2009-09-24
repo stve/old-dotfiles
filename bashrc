@@ -36,14 +36,7 @@ alias rr='touch tmp/restart.txt'
 alias rf='rake features'
 alias flush='memflush --servers=localhost'
 
-alias work='cd ~/work'
-alias cdc='cd ~/work/coolspotters'
-alias cds='cd ~/work/simplesports'
-alias cdsi='cd ~/work/simplesports-iphone'
-alias cdf='cd ~/work/fanzter'
-alias cdfr='cd ~/work/fanzter-recipes'
-alias cdfe='cd ~/work/fanzter-extras'
-alias csce='cd ~/work/coolspotters-extras'
+alias work='cd ~/Projects'
 
 # git
 alias gb='git branch'
