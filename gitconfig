@@ -4,7 +4,7 @@
 	excludesfile = /Users/steve/.gitignore
 [user]
 	name = Steve Agalloco
-	email = steve@fanzter.com
+	email = steve.agalloco@gmail.com
 [alias]
 	st = status
 	ci = commit
