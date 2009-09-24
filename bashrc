@@ -1,8 +1,13 @@
-#
-export EC2_HOME=~/.ec2
+# paths
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-41620/"
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$EC2_HOME/bin:$PATH"
 export MANPATH=/opt/local/share/man:$MANPATH
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
+
+# ec2
+export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+
 
 # shell
 GREEN="\[\033[0;32m\]"
