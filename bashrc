@@ -50,7 +50,11 @@ alias gpp='git pull && git push'
 alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
 
 # mysql
-alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
-alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+alias start_mysql="/usr/local/Cellar/mysql/5.1.38/share/mysql/mysql.server start"
+alias stop_mysql="/usr/local/Cellar/mysql/5.1.38/share/mysql/mysql.server stop"
 
+# brew
+alias update_brew='cd /usr/local && git pull'
 
+# rvm
+if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
