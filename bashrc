@@ -24,6 +24,15 @@ function parse_git_branch {
 
 source /usr/local/bin/git-completion.sh
 
+# other functions
+
+# from http://gist.github.com/180587
+function psg {
+  ps wwwaux | egrep "($1|%CPU)" | grep -v grep
+}
+
+# prompt
+
 export PS1="$GREEN\h:$BLUE\W$WHITE\$(parse_git_branch)\$ "
 
 # editors
