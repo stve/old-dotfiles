@@ -1,7 +1,6 @@
 # paths
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-41620"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
-
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
@@ -70,3 +69,14 @@ alias update_brew='cd /usr/local && git pull'
 
 # rvm
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+	
+function gemdir {
+  if [[ -z "$1" ]] ; then
+  	cd `rvm gemdir`
+  	pwd
+  else
+  	rvm "$1"
+  	cd `rvm gemdir`
+  	pwd
+  fi
+}
