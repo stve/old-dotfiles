@@ -32,6 +32,13 @@ function psg {
   ps wwwaux | egrep "($1|%CPU)" | grep -v grep
 }
 
+# a nice function to send authorized keys to the server
+# picked up from deploying rails applications ( pragprog.com)
+# Usage: authme 123.45.67.89
+function authme {
+   ssh $1 'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+ }
+
 # prompt
 
 export PS1="$GREEN\h:$BLUE\W$WHITE\$(parse_git_branch)\$ "
