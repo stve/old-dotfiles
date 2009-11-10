@@ -27,6 +27,9 @@ source /usr/local/bin/git-completion.sh
 
 # other functions
 
+# changing directory to code project
+function cw { cd ~/Projects/$1; }
+
 # from http://gist.github.com/180587
 function psg {
   ps wwwaux | egrep "($1|%CPU)" | grep -v grep
@@ -54,11 +57,16 @@ alias la='ls -A'
 alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'
+alias flush='memflush --servers=localhost'
+
+# rails
+alias sc='script/console'
 alias rr='touch tmp/restart.txt'
 alias rf='rake features'
-alias flush='memflush --servers=localhost'
-alias sc='script/console'
+alias migrate="rake db:migrate db:test:prepare"
+alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 
+# directories
 alias work='cd ~/Projects'
 
 # git
