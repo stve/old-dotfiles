@@ -26,6 +26,3 @@ alias gpa='git co master && git pull && git co staging && git pull && git co pro
 # mysql
 alias start_mysql="/usr/local/Cellar/mysql/5.1.41/share/mysql/mysql.server start"
 alias stop_mysql="/usr/local/Cellar/mysql/5.1.41/share/mysql/mysql.server stop"
-
-# brew
-alias update_brew='cd /usr/local && git pull'
