@@ -23,3 +23,32 @@ function gemdir {
   	pwd
   fi
 }
+
+# 
+function rake_cache() {
+  rake -T > .rake_t_cache
+}
+
+function rake_cache_clear() {
+  if [ -e ".rake_t_cache" ]; then
+    rm .rake_t_cache
+  fi
+}
+
+export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
+
+function _check_rakefile() {
+  if [ ! -e Rakefile ]; then
+    return
+  fi
+
+  if [ -e ".rake_t_cache" ]; then
+    local tasks=`cat .rake_t_cache | awk '{print $2}'`
+  else
+    local tasks=`rake --silent -T | awk '{print $2}'`
+  fi
+
+  COMPREPLY=( $(compgen -W "${tasks}" -- $2) )
+}
+complete -F _check_rakefile -o default rake
+
