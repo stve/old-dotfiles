@@ -5,8 +5,21 @@ function authme {
    ssh $1 'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
  }
 
-# changing directory to code project
-function cw { cd ~/Projects/$1; }
+# changing directory to code project or project dir
+function cw { 
+	if [[ -z "$1" ]] ; then
+		cd ~/Projects/$1; 
+	else
+		cd ~/Projects
+	fi
+}
+
+function _list_projects {
+	local tasks=`ls ~/Projects`
+  COMPREPLY=( $(compgen -W "${tasks}" -- $2) )
+}
+
+complete -F _list_projects -o default cw
 
 # from http://gist.github.com/180587
 function psg {
@@ -24,7 +37,7 @@ function gemdir {
   fi
 }
 
-# 
+# from http://technotales.wordpress.com/2009/09/18/rake-completion-cache/
 function rake_cache() {
   rake -T > .rake_t_cache
 }
