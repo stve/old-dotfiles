@@ -8,9 +8,9 @@ function authme {
 # changing directory to code project or project dir
 function cw { 
 	if [[ -z "$1" ]] ; then
-		cd ~/Projects/$1; 
-	else
 		cd ~/Projects
+	else
+		cd ~/Projects/$1; 
 	fi
 }
 
