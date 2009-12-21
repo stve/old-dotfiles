@@ -6,6 +6,7 @@ profile
 *.tmproj
 *.log
 .svn
+.rake_t_cache
 
 # windows
 Thumbs.db
