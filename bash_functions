@@ -67,6 +67,7 @@ complete -F _check_rakefile -o default rake
 
 
 # from http://www.paperplanes.de/2009/12/3/making_textmate_and_rvm_play_nice.html
+# set the ~/.rvm/bin/textmate_ruby to the current version we're using
 function rvmd() {
-  rvm use $1 --default
+  rvm $1 --symlink textmate
 }
