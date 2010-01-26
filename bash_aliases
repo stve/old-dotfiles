@@ -5,6 +5,7 @@ alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'
 alias flush='memflush --servers=localhost'
+alias gs='gem list | grep'
 
 # rails
 alias sc='script/console'
