@@ -32,3 +32,6 @@ alias stop_mysql="/usr/local/Cellar/mysql/5.1.41/share/mysql/mysql.server stop"
 # postgres
 alias start_postgres="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_postgres="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+# redis
+alias start_redis="redis-server /usr/local/etc/redis.conf"
