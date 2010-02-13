@@ -71,3 +71,21 @@ complete -F _check_rakefile -o default rake
 function rvmd() {
   rvm $1 --symlink textmate
 }
+
+
+
+function sc () {
+  if [ -f ./script/rails ]; then 
+    rails console $argv
+  else
+    ./script/console $argv
+  fi
+}
+
+function db () {
+  if [ -f ./script/rails ]; then 
+    rails dbconsole $argv
+  else
+    ./script/dbconsole $argv
+  fi
+}
