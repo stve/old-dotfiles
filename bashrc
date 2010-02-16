@@ -43,3 +43,6 @@ if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
 # rvm
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 if [ -d ~/.rvm/bin ] ; then export PATH=$PATH:~/.rvm/bin ; fi
+	
+# jeweler
+export JEWELER_OPTS="--shoulda --gemcutter"
