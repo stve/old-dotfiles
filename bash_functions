@@ -37,6 +37,14 @@ function gemdir {
   fi
 }
 
+function gg {
+  if [[ -z "$1" ]] ; then
+    gem list
+  else
+    gem list | grep $1
+  fi
+}
+
 # from http://technotales.wordpress.com/2009/09/18/rake-completion-cache/
 function rake_cache() {
   rake -T > .rake_t_cache
