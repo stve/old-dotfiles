@@ -21,6 +21,16 @@ function _list_projects {
 
 complete -F _list_projects -o default cw
 
+function work {
+  if [[ -z "$1" ]] ; then
+    cd ~/Projects
+  else
+    mate ~/Projects/$1
+  fi
+}
+
+complete -F _list_projects -o default work
+
 # from http://gist.github.com/180587
 function psg {
   ps wwwaux | egrep "($1|%CPU)" | grep -v grep
