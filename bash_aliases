@@ -28,8 +28,8 @@ alias gpp='git pull && git push'
 alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
 
 # mysql
-alias start_mysql="/usr/local/Cellar/mysql/5.1.41/share/mysql/mysql.server start"
-alias stop_mysql="/usr/local/Cellar/mysql/5.1.41/share/mysql/mysql.server stop"
+alias start_mysql="/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server start"
+alias stop_mysql="/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server stop"
 
 # postgres
 alias start_postgres="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
