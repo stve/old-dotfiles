@@ -25,7 +25,7 @@ function work {
   if [[ -z "$1" ]] ; then
     cd ~/Projects
   else
-    mate ~/Projects/$1
+    cd ~/Projects/$1 && mate .
   fi
 }
 
