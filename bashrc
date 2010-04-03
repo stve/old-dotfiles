@@ -10,8 +10,12 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$EC2_HOME/bin:$PATH"
 
 # ec2
-export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+if [ -f "$HOME/.ec2/pk-*.pem" ]; then
+	export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+fi
+if [ -f "$HOME/.ec2/cert-*.pem" ]; then
+	export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+fi
 
 # shell
 GREEN="\[\033[0;32m\]"
