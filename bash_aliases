@@ -37,3 +37,6 @@ alias stop_postgres="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m
 
 # redis
 alias start_redis="redis-server /usr/local/etc/redis.conf"
+
+# misc
+alias start_starling="starling -P ~/run/starling.pid -q ~/run/spool"
