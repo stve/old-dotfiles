@@ -30,7 +30,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-source /usr/local/bin/git-completion.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # prompt
 
