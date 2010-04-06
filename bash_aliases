@@ -5,7 +5,10 @@ alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'
 alias flush='memflush --servers=localhost'
+
+# gems
 alias gs='gem list | grep'
+alias gl='gem list'
 
 # rails
 alias rr='touch tmp/restart.txt'
@@ -19,7 +22,6 @@ alias rakeacc="rake_cache_clear"
 
 # directories
 alias xcode="open -a Xcode"
-
 
 # git
 alias gb='git branch'
