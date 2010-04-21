@@ -15,6 +15,10 @@ alias rr='touch tmp/restart.txt'
 alias rf='rake features'
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
+alias routes="rake routes"
+
+# testing
+alias cuke="cucumber features"
 
 # rake
 alias rakeac="rake_cache"
