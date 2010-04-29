@@ -16,3 +16,5 @@ Desktop.ini
 build/*
 *.pbxuser
 *.mode1v3
+
+data/*
