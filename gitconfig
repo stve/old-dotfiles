@@ -1,14 +1,14 @@
 [github]
-	user = spagalloco
+  user = spagalloco
 [core]
-	excludesfile = /Users/steve/.gitignore
+  excludesfile = /Users/steve/.gitignore
 [user]
-	name = Steve Agalloco
-	email = steve.agalloco@gmail.com
+  name = Steve Agalloco
+  email = steve.agalloco@gmail.com
 [alias]
-	st = status
-	ci = commit
-	co = checkout
+  st = status
+  ci = commit
+  co = checkout
   lg = log --graph --pretty=format:'%Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color]
   branch = auto
