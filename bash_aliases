@@ -28,10 +28,10 @@ alias rakeacc="rake_cache_clear"
 alias xcode="open -a Xcode"
 
 # git
+alias gc='git clone'
 alias gb='git branch'
 alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
-alias gpa='git co master && git pull && git co staging && git pull && git co production && git pull && git co master'
 alias stash='git stash'
 
 # mysql
