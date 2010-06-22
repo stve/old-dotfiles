@@ -7,15 +7,15 @@ function authme {
 
 # changing directory to code project or project dir
 function cw { 
-	if [[ -z "$1" ]] ; then
-		cd ~/Projects
-	else
-		cd ~/Projects/$1; 
-	fi
+  if [[ -z "$1" ]] ; then
+    cd ~/Projects
+  else
+    cd ~/Projects/$1; 
+  fi
 }
 
 function _list_projects {
-	local tasks=`ls ~/Projects`
+  local tasks=`ls ~/Projects`
   COMPREPLY=( $(compgen -W "${tasks}" -- $2) )
 }
 
@@ -38,12 +38,12 @@ function psg {
 
 function gemdir {
   if [[ -z "$1" ]] ; then
-  	cd `rvm gemdir`
-  	pwd
+    cd `rvm gemdir`
+    pwd
   else
-  	rvm "$1"
-  	cd `rvm gemdir`
-  	pwd
+    rvm "$1"
+    cd `rvm gemdir`
+    pwd
   fi
 }
 

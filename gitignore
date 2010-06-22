@@ -7,6 +7,7 @@ profile
 *.log
 .svn
 .rake_t_cache
+.rvmrc
 
 # windows
 Thumbs.db

@@ -11,10 +11,10 @@ export PATH="$EC2_HOME/bin:$PATH"
 
 # ec2
 if [ -f "$HOME/.ec2/pk-*.pem" ]; then
-	export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+  export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
 fi
 if [ -f "$HOME/.ec2/cert-*.pem" ]; then
-	export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+  export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 fi
 
 # shell
@@ -30,10 +30,11 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+# autocompletion
 source /usr/local/etc/bash_completion.d/git-completion.bash
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
 # prompt
-
 export PS1="$GREEN\h:$BLUE\W$WHITE\$(parse_git_branch)\$ "
 
 # editors
@@ -43,11 +44,11 @@ export EDITOR=mate
 
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
-	
+
 # rvm
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 if [ -d ~/.rvm/bin ] ; then export PATH=$PATH:~/.rvm/bin ; fi
 if [ -r ~/.rvm/scripts/completion ] ; then source ~/.rvm/scripts/completion ; fi
-	
+
 # jeweler
 export JEWELER_OPTS="--shoulda --gemcutter"

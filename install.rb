@@ -18,14 +18,14 @@ Dir['*'].each do |file|
   if File.exist?(target)
     # if the symlink already exists, just skip this
     next if File.symlink?(target) && File.readlink(target) == File.expand_path(file)
-    
+
     # backup the file if it exists and it's not a symlink
     `mv #{target} #{File.join(backup, symfile)}` unless File.symlink?(target)
   end
-  
+
   # create a symbolic link
   `ln -s #{File.expand_path(file)} #{target}`
-   
+
 end
 
 # git push on commit
