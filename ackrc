@@ -1,1 +1,2 @@
 --type-add=ruby=.rake
+--type-add=ruby=.feature
