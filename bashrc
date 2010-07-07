@@ -38,9 +38,9 @@ source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 export PS1="$GREEN\h:$BLUE\W$WHITE\$(parse_git_branch)\$ "
 
 # editors
-export GIT_EDITOR=mate_wait
+export GIT_EDITOR="mate -wl1"
 export SVN_EDITOR=mate_wait
-export EDITOR=mate
+export EDITOR='mate -w'
 
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
