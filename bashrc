@@ -103,7 +103,7 @@ bash_prompt() {
 
   # PS1="$Y\$(__my_rvm_ruby_version)$W[$W\u@$C\h$W:$G\w$EMM\$(__git_branch)$EMR\$(__git_dirty)${NONE}]$ "
   # PS1="$W\$(__my_rvm_ruby_version)$G\h:$C\w $W[\$(__git_branch)\$(__git_dirty)]${NONE}$ "
-  PS1="$W\$(__my_rvm_ruby_version)$G\h:$C\w $W\$(__present_git_branch)${NONE}$ "
+  PS1="$Y\$(__my_rvm_ruby_version)$G\h:$C\w $W\$(__present_git_branch)${NONE}$ "
 }
 
 bash_prompt
