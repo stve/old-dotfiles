@@ -5,6 +5,9 @@ alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'
 alias flush='memflush --servers=localhost'
+alias disku='du -sh *'
+alias diskd='du -sh'
+
 
 # gems
 alias gs='gem list | grep'
