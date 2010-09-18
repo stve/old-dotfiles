@@ -13,6 +13,10 @@ alias diskd='du -sh'
 alias gs='gem list | grep'
 alias gl='gem list'
 
+
+# bundler
+alias be="bundle exec"
+
 # rails
 alias rr='touch tmp/restart.txt'
 alias rf='rake features'
