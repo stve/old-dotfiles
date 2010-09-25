@@ -2,7 +2,7 @@
 [ -z "$PS1" ] && return
 
 # paths
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-53907/jars"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-57419/jars"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
