@@ -23,6 +23,7 @@ alias rf='rake features'
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias routes="rake routes"
+alias gen="rails generate"
 
 # testing
 alias cuke="cucumber features"
@@ -35,7 +36,6 @@ alias rakeacc="rake_cache_clear"
 alias xcode="open -a Xcode"
 
 # git
-alias gc='git clone'
 alias gb='git branch'
 alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
