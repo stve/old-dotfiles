@@ -8,6 +8,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$EC2_HOME/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
 
 # ec2
 if [ -f "$HOME/.ec2/pk-*.pem" ]; then
