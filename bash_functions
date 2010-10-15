@@ -6,11 +6,11 @@ function authme {
  }
 
 # changing directory to code project or project dir
-function cw { 
+function cw {
   if [[ -z "$1" ]] ; then
-    cd ~/Projects
+    cd ~/Projects && cl;
   else
-    cd ~/Projects/$1; 
+    cd ~/Projects/$1 && cl;
   fi
 }
 
@@ -36,7 +36,7 @@ function psg {
   ps wwwaux | egrep "($1|%CPU)" | grep -v grep
 }
 
-# rake 
+# rake
 # http://technotales.wordpress.com/2009/09/18/rake-completion-cache/
 function rake_cache() {
   rake -T > .rake_t_cache
@@ -67,7 +67,7 @@ complete -F _check_rakefile -o default rake
 
 # rails
 function sc () {
-  if [ -f ./script/rails ]; then 
+  if [ -f ./script/rails ]; then
     rails console $argv
   else
     ./script/console $argv
@@ -75,7 +75,7 @@ function sc () {
 }
 
 function db () {
-  if [ -f ./script/rails ]; then 
+  if [ -f ./script/rails ]; then
     rails dbconsole $argv
   else
     ./script/dbconsole $argv
