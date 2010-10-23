@@ -7,6 +7,7 @@ alias reload='source ~/.bashrc'
 alias flush='memflush --servers=localhost'
 alias disku='du -sh *'
 alias diskd='du -sh'
+alias speedup='sudo rm -f /private/var/log/asl/*.asl'
 
 
 # gems
