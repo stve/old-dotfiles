@@ -5,6 +5,8 @@ function authme {
    ssh $1 'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
  }
 
+function pidof { ps -Ac -o pid,command| egrep -i " $@\$" | awk '{print $1}'; }
+
 # changing directory to code project or project dir
 function cw {
   if [[ -z "$1" ]] ; then
