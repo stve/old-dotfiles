@@ -4,11 +4,14 @@
 # paths
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-57419/jars"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$EC2_HOME/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
+
+export NODE_PATH="/usr/local/lib/node"
 
 # ec2
 if [ -f "$HOME/.ec2/pk-*.pem" ]; then
