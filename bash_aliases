@@ -9,18 +9,14 @@ alias disku='du -sh *'
 alias diskd='du -sh'
 alias speedup='sudo rm -f /private/var/log/asl/*.asl'
 
-
 # gems
-alias gs='gem list | grep'
 alias gl='gem list'
-
 
 # bundler
 alias be="bundle exec"
 
 # rails
 alias rr='touch tmp/restart.txt'
-alias rf='rake features'
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias routes="rake routes"
@@ -38,6 +34,7 @@ alias xcode="open -a Xcode"
 
 # git
 alias gb='git branch'
+alias clone='git clone'
 alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
 alias stash='git stash'
