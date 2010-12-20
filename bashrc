@@ -2,7 +2,7 @@
 [ -z "$PS1" ] && return
 
 # paths
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-57419/jars"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.3-62308/jars"
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
 
 export PATH="/usr/local/bin:$PATH"
@@ -29,9 +29,6 @@ source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 export GIT_EDITOR="mate -wl1"
 export SVN_EDITOR=mate_wait
 export EDITOR='mate -w'
-
-# jeweler
-export JEWELER_OPTS="--shoulda --gemcutter"
 
 # bash
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
