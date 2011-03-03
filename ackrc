@@ -1,2 +1,4 @@
---type-add=ruby=.rake
---type-add=ruby=.feature
+--type-add=ruby=.rake,.feature
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+--smart-case
+--follow
