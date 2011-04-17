@@ -14,6 +14,7 @@ alias gl='gem list'
 
 # bundler
 alias be="bundle exec"
+alias bi="bundle install"
 
 # rails
 alias rr='touch tmp/restart.txt'
