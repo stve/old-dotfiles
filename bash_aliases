@@ -16,6 +16,9 @@ alias gl='gem list'
 alias be="bundle exec"
 alias bi="bundle install"
 
+# homebrew
+alias brewclean="brew dirty | awk '{print $1}' | brew cleanup"
+
 # rails
 alias rr='touch tmp/restart.txt'
 alias migrate="rake db:migrate db:test:prepare"
