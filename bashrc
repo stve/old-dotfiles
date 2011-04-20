@@ -22,8 +22,8 @@ if [ -f "$HOME/.ec2/cert-*.pem" ]; then
 fi
 
 # autocompletion
-source /usr/local/etc/bash_completion.d/git-completion.bash
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 
 # editors
 export GIT_EDITOR="mate -wl1"
