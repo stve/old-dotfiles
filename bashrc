@@ -40,5 +40,6 @@ if [ -d ~/.rvm/bin ] ; then export PATH=$PATH:~/.rvm/bin ; fi
 if [ -r ~/.rvm/scripts/completion ] ; then source ~/.rvm/scripts/completion ; fi
 
 # prompt
+export PROMPT_COMMAND="history -a"
 bash_prompt
 unset bash_prompt
