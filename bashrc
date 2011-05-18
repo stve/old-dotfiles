@@ -12,6 +12,7 @@ export PATH="$EC2_HOME/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 export NODE_PATH="/usr/local/lib/node"
+export RBXOPT="-Xrbc.db=~/.rubinius"
 
 # ec2
 if [ -f "$HOME/.ec2/pk-*.pem" ]; then
