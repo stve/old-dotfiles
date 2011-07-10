@@ -1,4 +1,14 @@
 --type-add=ruby=.rake,.feature
+--type-add=css=.sass
+--type-set=cucumber=.feature
 --type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
---smart-case
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
+--sort-files
+--color
 --follow
+--group
+--smart-case
