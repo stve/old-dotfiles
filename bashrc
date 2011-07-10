@@ -12,6 +12,7 @@ export PATH="$EC2_HOME/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 export NODE_PATH="/usr/local/lib/node"
+export RBXOPT="-Xrbc.db=~/.rubinius"
 
 # ec2
 if [ -f "$HOME/.ec2/pk-*.pem" ]; then
@@ -22,8 +23,8 @@ if [ -f "$HOME/.ec2/cert-*.pem" ]; then
 fi
 
 # autocompletion
-source /usr/local/etc/bash_completion.d/git-completion.bash
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 
 # editors
 export GIT_EDITOR="mate -wl1"
@@ -40,5 +41,6 @@ if [ -d ~/.rvm/bin ] ; then export PATH=$PATH:~/.rvm/bin ; fi
 if [ -r ~/.rvm/scripts/completion ] ; then source ~/.rvm/scripts/completion ; fi
 
 # prompt
+export PROMPT_COMMAND="history -a"
 bash_prompt
 unset bash_prompt

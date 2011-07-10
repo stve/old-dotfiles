@@ -42,6 +42,7 @@ alias clone='git clone'
 alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
 alias stash='git stash'
+alias gti='git'
 
 # mysql
 alias start_mysql="/usr/local/Cellar/mysql/5.1.49/share/mysql/mysql.server start"
