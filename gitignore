@@ -9,6 +9,8 @@ profile
 .rake_t_cache
 .rvmrc
 .bundle/
+.powenv
+.powrc
 
 # windows
 Thumbs.db
