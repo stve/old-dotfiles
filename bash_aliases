@@ -58,6 +58,7 @@ alias start_redis="redis-server /usr/local/etc/redis.conf"
 # misc
 alias start_starling="starling -P ~/run/starling.pid -q ~/run/spool"
 alias humm="ssh -L 8888:localhost:27017 humm"
+alias lock="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
 
 # osx
 alias dockspace="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}' && killall Dock"
