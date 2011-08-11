@@ -24,7 +24,7 @@ fi
 
 # autocompletion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 
 # editors
 export GIT_EDITOR="mate -wl1"
