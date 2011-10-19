@@ -1,12 +1,15 @@
 --type-add=ruby=.rake,.feature
---type-add=css=.sass
 --type-set=cucumber=.feature
 --type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+--type-set=sass=.sass
+--type-set=coffee=.coffee
+--type-set=bin=.pdf
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
+--nobin
 --sort-files
 --color
 --follow
