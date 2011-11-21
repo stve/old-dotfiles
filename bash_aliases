@@ -8,6 +8,7 @@ alias disku='du -sh *'
 alias diskd='du -sh'
 alias speedup='sudo rm -f /private/var/log/asl/*.asl'
 alias e="exit"
+alias flushdns='dscacheutil -flushcache'
 
 # gems
 alias gl='gem list'
