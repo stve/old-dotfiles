@@ -1,5 +1,5 @@
 # aliases
-alias ll='ls -lh'
+alias ll='ls -al'
 alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'

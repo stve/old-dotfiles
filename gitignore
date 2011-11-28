@@ -10,7 +10,6 @@ profile
 .rvmrc
 .bundle/
 .powenv
-.powrc
 
 # windows
 Thumbs.db
