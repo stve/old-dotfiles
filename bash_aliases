@@ -1,5 +1,5 @@
 # aliases
-alias ll='ls -lh'
+alias ll='ls -al'
 alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'
@@ -8,6 +8,7 @@ alias disku='du -sh *'
 alias diskd='du -sh'
 alias speedup='sudo rm -f /private/var/log/asl/*.asl'
 alias e="exit"
+alias flushdns='dscacheutil -flushcache'
 
 # gems
 alias gl='gem list'
