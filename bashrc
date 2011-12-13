@@ -11,7 +11,7 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$EC2_HOME/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-export NODE_PATH="/usr/local/lib/node;/usr/local/lib/node_modules"
+export NODE_PATH="/usr/local/lib/node:/usr/local/lib/node_modules"
 export RBXOPT="-Xrbc.db=~/.rubinius"
 
 # ec2
