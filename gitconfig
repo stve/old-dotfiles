@@ -10,6 +10,7 @@
   ci = commit
   co = checkout
   lg = log --graph --pretty=format:'%Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  shame = blame
 [color]
   branch = auto
   diff = auto
