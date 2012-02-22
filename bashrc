@@ -44,3 +44,4 @@ if [ -r ~/.rvm/scripts/completion ] ; then source ~/.rvm/scripts/completion ; fi
 export PROMPT_COMMAND="history -a"
 bash_prompt
 unset bash_prompt
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
