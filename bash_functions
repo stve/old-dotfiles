@@ -7,6 +7,21 @@ function authme {
 
 function pidof { ps -Ac -o pid,command| egrep -i " $@\$" | awk '{print $1}'; }
 
+function rvmrc {
+  if [ $1 ]; then
+    if [ $2 ]; then
+      local command="--rvmrc --create use ${2}@${1}"
+      rvm $command
+    else
+      local rvm_current=`rvm current`
+      local command="--rvmrc --create use ${rvm_current}@${1}"
+      rvm $command
+    fi
+  else
+    echo "Usage: rvmrc <gemset name> <ruby version>"
+  fi
+}
+
 # changing directory to code project or project dir
 function cw {
   if [[ -z "$1" ]] ; then
