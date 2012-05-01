@@ -1,8 +1,11 @@
---type-add=ruby=.rake,.feature
+--type-add=ruby=.rake,.builder
 --type-set=cucumber=.feature
+--type-add=html=.html.erb
 --type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
---type-set=sass=.sass
---type-set=coffee=.coffee
+--type-add=js=.js.erb,.coffee,.eco,.jst.eco,.jst
+--type-add=css=.sass,.less,.css.scss,.scss
+--type-set=jst=.jst
+--type-set=md=.md
 --type-set=bin=.pdf
 --ignore-dir=vendor
 --ignore-dir=log
