@@ -10,6 +10,7 @@
         st = status
         ci = commit
         co = checkout
+        br = branch
 [color]
         branch = auto
         diff = auto
@@ -29,3 +30,5 @@
         untracked = cyan
 [apply]
         whitespace = nowarn
+[branch]
+        autosetuprebase = always
