@@ -32,3 +32,5 @@
         whitespace = nowarn
 [branch]
         autosetuprebase = always
+[push]
+	default = tracking
