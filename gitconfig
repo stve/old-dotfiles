@@ -1,36 +1,43 @@
 [github]
-        user = spagalloco
+    user = spagalloco
 [core]
-        excludesfile = /Users/steve/.gitignore
-        autocrlf = input
+    excludesfile = /Users/steve/.gitignore
+    autocrlf = input
 [user]
-        name = Steve Agalloco
-        email = steve.agalloco@gmail.com
+    name = Steve Agalloco
+    email = steve.agalloco@gmail.com
 [alias]
-        st = status
-        ci = commit
-        co = checkout
-        br = branch
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    # via http://ozmm.org/posts/git_msg.html
+    msg = commit --allow-empty -m
+    # via http://andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+    pul = pull
+    comit = commit
 [color]
-        branch = auto
-        diff = auto
-        status = auto
+    branch = auto
+    diff = auto
+    status = auto
 [color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [apply]
-        whitespace = nowarn
+    whitespace = nowarn
 [branch]
-        autosetuprebase = always
+    autosetuprebase = always
 [push]
-	default = tracking
+    default = tracking
