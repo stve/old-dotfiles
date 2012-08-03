@@ -3,7 +3,6 @@ alias ll='ls -al'
 alias rm='rm -i'
 alias cl='clear'
 alias reload='source ~/.bashrc'
-alias flush='memflush --servers=localhost'
 alias disku='du -sh *'
 alias diskd='du -sh'
 alias speedup='sudo rm -f /private/var/log/asl/*.asl'
@@ -17,6 +16,7 @@ alias newgem='git clone git@github.com:spagalloco/gem_template.git'
 # bundler
 alias be="bundle exec"
 alias bi="bundle install"
+alias bo="bundle open"
 
 # homebrew
 alias brewclean="brew dirty | awk '{print $1}' | brew cleanup"
@@ -46,16 +46,19 @@ alias gpp='git pull && git push'
 alias stash='git stash'
 alias gti='git'
 
-# mysql
-alias start_mysql="mysql.server start"
-alias stop_mysql="mysql.server stop"
+# databases (from jnunemaker)
+alias mstart='launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist'
+alias mstop='launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist'
+alias mystart='/usr/local/Cellar/mysql/5.1.45/share/mysql/mysql.server start'
+alias mystop='/usr/local/Cellar/mysql/5.1.45/share/mysql/mysql.server stop'
+alias memstart='launchctl load -w ~/Library/LaunchAgents/com.danga.memcached.plist'
+alias memstop='launchctl unload -w ~/Library/LaunchAgents/com.danga.memcached.plist'
+alias redstart='launchctl load -w ~/Library/LaunchAgents/io.redis.redis-server.plist'
+alias redstop='launchctl unload -w ~/Library/LaunchAgents/io.redis.redis-server.plist'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias flush='memflush --servers=localhost'
 
-# postgres
-alias start_postgres="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias stop_postgres="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-# redis
-alias start_redis="redis-server /usr/local/etc/redis.conf"
 
 # misc
 alias start_starling="starling -P ~/run/starling.pid -q ~/run/spool"
