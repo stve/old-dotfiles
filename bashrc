@@ -27,9 +27,9 @@ source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 
 # editors
-export GIT_EDITOR="mate -wl1"
-export SVN_EDITOR=mate_wait
-export EDITOR='mate -w'
+export GIT_EDITOR="subl -w"
+export SVN_EDITOR="subl -w"
+export EDITOR="subl -w"
 
 # bash
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
