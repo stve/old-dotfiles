@@ -7,21 +7,6 @@ function authme {
 
 function pidof { ps -Ac -o pid,command| egrep -i " $@\$" | awk '{print $1}'; }
 
-function rvmrc {
-  if [ $1 ]; then
-    if [ $2 ]; then
-      local command="--rvmrc --create use ${2}@${1}"
-      rvm $command
-    else
-      local rvm_current=`rvm current`
-      local command="--rvmrc --create use ${rvm_current}@${1}"
-      rvm $command
-    fi
-  else
-    echo "Usage: rvmrc <gemset name> <ruby version>"
-  fi
-}
-
 # changing directory to code project or project dir
 function cw {
   if [[ -z "$1" ]] ; then
@@ -37,16 +22,6 @@ function _list_projects {
 }
 
 complete -F _list_projects -o default cw
-
-function work {
-  if [[ -z "$1" ]] ; then
-    cd ~/Projects
-  else
-    cd ~/Projects/$1 && mate .
-  fi
-}
-
-complete -F _list_projects -o default work
 
 # from http://gist.github.com/180587
 function psg {
@@ -114,33 +89,6 @@ function __present_git_branch {
   [ "$branch" != "" ] && echo "[$branch$dirty]"
 }
 
-# rvm
-# set the ~/.rvm/bin/textmate_ruby to the current version we're using
-# http://www.paperplanes.de/2009/12/3/making_textmate_and_rvm_play_nice.html
-function rvmd() {
-  rvm $1 --symlink textmate
-}
-
-function __my_rvm_ruby_version {
-  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
-  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
-  local ruby_type=$(echo $RUBY_VERSION | awk -F'-' '{print $1}')
-  local full="$ruby_type($version$gemset)"
-  [ "$full" != "" ] && echo "$full "
-}
-
-function gemdir {
-  if [[ -z "$1" ]] ; then
-    cd `rvm gemdir`
-    pwd
-  else
-    rvm "$1"
-    cd `rvm gemdir`
-    pwd
-  fi
-}
-
 # prompt
 bash_prompt() {
   local NONE="\[\033[0m\]" # unsets color to term's fg color
@@ -178,8 +126,6 @@ bash_prompt() {
   local UC=$W # user's color
   [ $UID -eq "0" ] && UC=$R # root's color
 
-  # PS1="$Y\$(__my_rvm_ruby_version)$W[$W\u@$C\h$W:$G\w$EMM\$(__git_branch)$EMR\$(__git_dirty)${NONE}]$ "
-  # PS1="$W\$(__my_rvm_ruby_version)$G\h:$C\w $W[\$(__git_branch)\$(__git_dirty)]${NONE}$ "
-  PS1="$Y\$(__my_rvm_ruby_version)$G\h:$C\w $W\$(__present_git_branch)${NONE}$ "
+  PS1="$Y(\$(rbenv version-name)) $G\h:$C\w $W\$(__present_git_branch)${NONE}$ "
   PS1="\[\033[G\]$PS1"
 }

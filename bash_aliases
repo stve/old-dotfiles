@@ -24,7 +24,10 @@ alias rr='touch tmp/restart.txt'
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias routes="rake routes"
-alias gen="rails generate"
+alias rg='./script/rails generate'
+alias rc='./script/rails console'
+alias rd='./script/rails dbconsole'
+alias rs='./script/rails server'
 
 # testing
 alias cuke="cucumber features"
