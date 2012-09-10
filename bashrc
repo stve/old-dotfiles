@@ -27,9 +27,9 @@ source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 
 # editors
-export GIT_EDITOR="subl -w"
-export SVN_EDITOR="subl -w"
-export EDITOR="subl -n"
+export GIT_EDITOR="subl -n -w"
+export SVN_EDITOR="subl -n -w"
+export EDITOR="subl -n -w"
 export BUNLDER_EDITOR="subl -n"
 
 # bash
