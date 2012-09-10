@@ -29,7 +29,8 @@ source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 # editors
 export GIT_EDITOR="subl -w"
 export SVN_EDITOR="subl -w"
-export EDITOR="subl -w"
+export EDITOR="subl -n"
+export BUNLDER_EDITOR="subl -n"
 
 # bash
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
