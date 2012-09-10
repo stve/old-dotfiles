@@ -66,3 +66,11 @@ alias lock="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSav
 alias dockspace="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}' && killall Dock"
 alias speedup='sudo rm -f /private/var/log/asl/*.asl'
 alias flushdns='dscacheutil -flushcache'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
