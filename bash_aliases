@@ -55,6 +55,8 @@ alias redstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.redis.pli
 alias redstop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.redis.plist'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias elstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist'
+alias elstop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist'
 alias flush='memflush --servers=localhost'
 
 # misc
