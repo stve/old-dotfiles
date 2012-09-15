@@ -5,6 +5,5 @@ gem: --no-ri --no-rdoc
 :bulk_threshold: 1000
 :verbose: true
 :sources: 
-- http://rubygems.org
+- https://rubygems.org
 :backtrace: false
-gemcutter_key: 3707b3ece5d5e34f6f7cfdf8879a1145
