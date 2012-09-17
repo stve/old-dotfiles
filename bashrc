@@ -25,6 +25,8 @@ fi
 # autocompletion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+# source `brew --prefix`/etc/bash_completion.d/ack.bash_completion.sh
 
 # editors
 export GIT_EDITOR="subl -n -w"
