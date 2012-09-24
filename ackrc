@@ -1,4 +1,4 @@
---type-add=ruby=.rake,.builder
+--type-add=ruby=.rake,.builder,.ru
 --type-set=cucumber=.feature
 --type-add=html=.html.erb
 --type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
