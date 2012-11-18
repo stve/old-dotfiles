@@ -62,10 +62,6 @@ alias elstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.elasticsea
 alias elstop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist'
 alias flush='memflush --servers=localhost'
 
-# misc
-alias start_starling="starling -P ~/run/starling.pid -q ~/run/spool"
-alias humm="ssh -L 8888:localhost:27017 humm"
-
 # osx
 alias lock="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
 alias dockspace="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}' && killall Dock"
