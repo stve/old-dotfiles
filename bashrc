@@ -5,7 +5,7 @@ export INPUTRC="~/.inputrc"
 
 # paths
 export EC2_HOME="`brew --prefix ec2-api-tools`/jars"
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"
+export JAVA_HOME=`/usr/libexec/java_home`
 
 export PATH=".bundle/binstubs:$PATH"
 export PATH="/usr/local/bin:$PATH"
