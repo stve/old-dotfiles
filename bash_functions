@@ -86,7 +86,7 @@ function __git_branch {
 function __present_git_branch {
   local branch=$(__git_branch)
   local dirty=$(__git_dirty)
-  [ "$branch" != "" ] && echo "[$branch$dirty]"
+  [ "$branch" != "" ] && echo "($branch$dirty)"
 }
 
 # prompt
@@ -126,6 +126,6 @@ bash_prompt() {
   local UC=$W # user's color
   [ $UID -eq "0" ] && UC=$R # root's color
 
-  PS1="$Y(\$(rbenv version-name)) $G\h:$C\w $W\$(__present_git_branch)${NONE}$ "
+  PS1="$Y(\$(rbenv version-name)) $G\w $W\$(__present_git_branch)${NONE}$ "
   PS1="\[\033[G\]$PS1"
 }
