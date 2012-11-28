@@ -1,7 +1,7 @@
 [github]
     user = spagalloco
 [core]
-    excludesfile = /Users/steve/.gitignore
+    excludesfile = ~/.gitignore
     autocrlf = input
 [user]
     name = Steve Agalloco
