@@ -65,7 +65,6 @@ if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
 export PROMPT_COMMAND="history -a"
 bash_prompt
 unset bash_prompt
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # direnv
 eval `direnv hook $0`
