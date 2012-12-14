@@ -7,6 +7,7 @@
 --type-set=jst=.jst
 --type-set=md=.md
 --type-set=bin=.pdf
+--ignore-dir=.bundle
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
