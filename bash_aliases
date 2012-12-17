@@ -60,6 +60,8 @@ alias pgstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql
 alias pgstop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
 alias elstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist'
 alias elstop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist'
+alias rabstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist'
+alias rabstop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist'
 alias flush='memflush --servers=localhost'
 
 # osx
