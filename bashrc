@@ -4,8 +4,8 @@
 export INPUTRC="~/.inputrc"
 
 # paths
-export EC2_HOME="`brew --prefix ec2-api-tools`/jars"
-export JAVA_HOME=`/usr/libexec/java_home`
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -29,10 +29,10 @@ export RBXOPT="-Xrbc.db=~/.rubinius"
 
 # ec2
 if [ -f "$HOME/.ec2/pk-*.pem" ]; then
-  export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+  export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 fi
 if [ -f "$HOME/.ec2/cert-*.pem" ]; then
-  export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+  export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 fi
 
 # autocompletion
