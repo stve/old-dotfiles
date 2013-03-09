@@ -9,7 +9,7 @@ alias e="exit"
 
 # gems
 alias gl='gem list'
-alias newgem='git clone git@github.com:spagalloco/gem_template.git'
+alias newgem='git clone git@github.com:spagalloco/gem-template.git'
 
 # bundler
 alias be="bundle exec"
@@ -28,6 +28,7 @@ alias rg='./script/rails generate'
 alias rc='./script/rails console'
 alias rd='./script/rails dbconsole'
 alias rs='./script/rails server'
+alias rben=rbenv
 
 # testing
 alias cuke="cucumber features"
