@@ -28,12 +28,8 @@ export RBXOPT="-Xrbc.db=~/.rubinius"
 [[ -s "/etc/bashrc" ]] && source "/etc/bashrc"
 
 # ec2
-if [ -f "$HOME/.ec2/pk-*.pem" ]; then
-  export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-fi
-if [ -f "$HOME/.ec2/cert-*.pem" ]; then
-  export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-fi
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 
 # autocompletion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
