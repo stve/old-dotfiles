@@ -111,6 +111,7 @@ profile
 .ruby-version
 .bundle/
 .powenv
+.envrc
 
 # windows
 Thumbs.db
