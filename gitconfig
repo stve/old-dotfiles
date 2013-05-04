@@ -41,3 +41,6 @@
     autosetuprebase = always
 [push]
     default = tracking
+[gist]
+    private = yes
+    browse = yes
