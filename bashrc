@@ -71,3 +71,6 @@ unset bash_prompt
 
 # direnv
 eval `direnv hook $0`
+
+# added by travis gem
+source ~/.travis/travis.sh
