@@ -58,11 +58,23 @@ function _check_rakefile() {
 complete -F _check_rakefile -o default rake
 
 # rails
-function sc () {
-  if [ -f ./script/rails ]; then
-    rails console $argv
+function rs {
+  if [ -e "./script/server" ]; then
+    ./script/server $@
+  elif [ -e "./bin/rails" ]; then
+    ./bin/rails server $@
   else
-    ./script/console $argv
+    ./script/rails server $@
+  fi
+}
+
+function rc {
+  if [ -e "./script/console" ]; then
+    ./script/console $@
+  elif [ -e "./bin/rails" ]; then
+    ./bin/rails console $@
+  else
+    script/rails console $@
   fi
 }
 
