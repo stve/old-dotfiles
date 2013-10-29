@@ -1,6 +1,9 @@
 # This makes the "delete" key work rather than just entering a ~
 "\e[3~": delete-char
 
+# delete the whole line no matter where we are
+"\C-d": kill-whole-line
+
 # These allow you to use ctrl+left/right arrow keys to jump the cursor over words
 "\e[5C": forward-word
 "\e[5D": backward-word
