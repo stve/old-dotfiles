@@ -25,10 +25,10 @@ alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias routes="rake routes"
 alias rg='./script/rails generate'
-#alias rc='./script/rails console'
 alias rd='./script/rails dbconsole'
-#alias rs='./script/rails server'
 alias rben=rbenv
+alias cov='/usr/bin/open -a "/Applications/Google Chrome.app" coverage/index.html'
+alias s="subl"
 
 # testing
 alias cuke="cucumber features"
