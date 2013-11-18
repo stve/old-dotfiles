@@ -41,7 +41,6 @@ source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 # source `brew --prefix`/etc/bash_completion.d/ack.bash_completion.sh
 source `brew --prefix`/etc/bash_completion.d/hub.bash_completion.sh
-source `brew --prefix`/etc/bash_completion.d/rabbitmqadmin.bash
 
 # history
 # Don't put duplicate lines in the history. See bash(1) for more options
