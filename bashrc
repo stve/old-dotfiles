@@ -18,7 +18,6 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$EC2_HOME/bin:$PATH"
-export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
