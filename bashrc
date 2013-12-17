@@ -20,6 +20,7 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$EC2_HOME/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+[[ -d "/usr/local/packer" ]] && export PATH="/usr/local/packer:$PATH"
 
 export NODE_PATH="/usr/local/lib/node_modules"
 export RBXOPT="-Xrbc.db=~/.rubinius"
