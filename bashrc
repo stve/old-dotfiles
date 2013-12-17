@@ -4,7 +4,7 @@
 export INPUTRC="~/.inputrc"
 
 # paths
-export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+export EC2_HOME="$(brew --prefix ec2-api-tools)/libexec"
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # rbenv
