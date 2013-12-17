@@ -52,12 +52,6 @@ source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 # source `brew --prefix`/etc/bash_completion.d/ack.bash_completion.sh
 source `brew --prefix`/etc/bash_completion.d/hub.bash_completion.sh
 
-# history
-# Don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
-# Ignore same sucessive entries.
-export HISTCONTROL=ignoreboth
-
 # ssh
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "~/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host\s" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
