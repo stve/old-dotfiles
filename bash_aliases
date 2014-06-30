@@ -6,6 +6,7 @@ alias reload='source ~/.bashrc'
 alias disku='du -sh *'
 alias diskd='du -sh'
 alias e="exit"
+alias ccat="pygmentize -g"
 
 # gems
 alias gl='gem list'
