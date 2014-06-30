@@ -23,7 +23,7 @@
 /Music/
 /Videos/
 /archive/
-/src/
+# /src/
 
 # Private
 /.Skype/
