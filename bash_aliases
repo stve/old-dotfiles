@@ -48,6 +48,7 @@ alias rollup='rake git:rollup'
 alias gpp='git pull && git push'
 alias stash='git stash'
 alias gti='git'
+alias gitpurge="git checkout master && git remote update --prune | git branch -r --merged | grep -v master | sed -e 's/origin\//:/' | xargs git push origin"
 
 # databases (from jnunemaker)
 alias mstart='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
