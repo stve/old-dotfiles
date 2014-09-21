@@ -1,5 +1,5 @@
 [github]
-    user = spagalloco
+    user = stve
 [core]
     excludesfile = ~/.gitignore
     autocrlf = input
@@ -44,3 +44,6 @@
 [gist]
     private = yes
     browse = yes
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
